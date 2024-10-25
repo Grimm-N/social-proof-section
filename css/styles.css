@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url("./fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
+}
+body {
+  font-size: 0.9375;
+  font-family: "LeagueSpartan";
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=styles.css.map */
