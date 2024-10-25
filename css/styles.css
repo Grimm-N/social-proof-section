@@ -1,11 +1,226 @@
 @font-face {
   font-family: "LeagueSpartan";
-  src: url("./fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
 }
 body {
-  font-size: 0.9375;
+  font-size: 0.9375rem;
   font-family: "LeagueSpartan";
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../images/bg.jpg");
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+  min-width: 100%;
+}
+body .section {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  flex: 0 1 20.5rem;
+  margin: 5.25rem 1rem 6rem;
+  width: 100%;
+}
+@media (min-width: 58rem) {
+  body .section {
+    display: grid;
+    flex: 0 1 70rem;
+    row-gap: 4.5rem;
+    text-align: left;
+    margin: 0 1.5rem;
+  }
+}
+body .section__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+@media (min-width: 58rem) {
+  body .section__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 0;
+  }
+}
+body .section__main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 58rem) {
+  body .section__main-content {
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 80%;
+  }
+}
+body .section__main-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.1rem;
+  padding: 0.2rem 2rem 0;
+  background: linear-gradient(135deg, hsl(32, 96%, 63%), hsl(0, 86%, 55%));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (min-width: 58rem) {
+  body .section__main-content h2 {
+    padding: 0;
+    padding-top: 0.1rem;
+    font-size: 3.5rem;
+    line-height: 0.85;
+  }
+}
+body .section__main-content p {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  letter-spacing: -0.05rem;
+}
+@media (min-width: 58rem) {
+  body .section__main-content p {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+}
+body .section__main-rate {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 58rem) {
+  body .section__main-rate {
+    justify-content: center;
+    max-width: 100%;
+  }
+}
+body .section__main-rate .rate__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.94rem 0;
+  background-color: transparent;
+  border: 0.1rem solid hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  max-width: 27.75rem;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+body .section__main-rate .rate__item:hover {
+  background-color: hsl(0, 0%, 100%);
+}
+body .section__main-rate .rate__item:hover span, body .section__main-rate .rate__item:hover p {
+  color: rgb(93, 3, 94);
+}
+@media (min-width: 58rem) {
+  body .section__main-rate .rate__item {
+    flex-direction: row;
+    padding: 1.25rem 0;
+    gap: 2rem;
+  }
+  body .section__main-rate .rate__item:nth-child(1) {
+    align-self: flex-start;
+  }
+  body .section__main-rate .rate__item:nth-child(2) {
+    align-self: center;
+  }
+  body .section__main-rate .rate__item:nth-child(3) {
+    align-self: flex-end;
+  }
+}
+body .section__main-rate .rate__item-stars {
+  display: flex;
+  justify-content: space-between;
+  width: 7.38rem;
+}
+body .section__main-rate .rate__item .star path {
+  fill: hsl(32, 96%, 63%);
+}
+body .section__main-rate .rate__item-category {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+body .section__main-rate .rate__item-category span {
+  background: linear-gradient(135deg, hsl(32, 96%, 63%), hsl(0, 86%, 55%));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .section__review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media (min-width: 58rem) {
+  body .section__review {
+    flex-direction: row;
+    gap: 1.85rem;
+  }
+}
+body .section__review-item {
+  background: linear-gradient(135deg, hsl(32, 96%, 63%), hsl(0, 86%, 55%));
+  border-radius: 0.5rem;
+  padding: 2.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  color: hsl(0, 0%, 100%);
+  line-height: 1.4;
+  text-align: left;
+  margin: 0;
+}
+@media (min-width: 58rem) {
+  body .section__review-item {
+    padding: 2.5rem 2.3rem 1rem 2rem;
+    max-width: 21.75;
+    width: 100%;
+    height: 100%;
+  }
+  body .section__review-item:nth-child(2) {
+    margin-top: 1rem;
+  }
+  body .section__review-item:nth-child(3) {
+    margin-top: 2rem;
+  }
+}
+body .section__review-item-header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+body .section__review-item-header img {
+  width: 2.5rem;
+  border-radius: 50%;
+  outline: 0.2rem solid hsl(0, 0%, 100%);
+}
+body .section__review-item-header .review__info-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+body .section__review-item-header .review__info-status {
+  color: rgb(93, 3, 94);
+  font-weight: 500;
+  font-size: 1rem;
+}
+body .section__review-item-comment {
+  font-size: 1rem;
+  font-weight: 500;
+}
+body footer {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
